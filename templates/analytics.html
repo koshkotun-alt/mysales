@@ -1,0 +1,41 @@
+{{define "analytics.html"}}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<title>Аналитика продаж</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<h2>Аналитика продаж за год</h2>
+<p>Продано за текущий месяц: {{.SumCurrent}}</p>
+<p>Продано за прошлый месяц: {{.SumLast}}</p>
+<p>Продано за год: {{.SumYear}}</p>
+
+<canvas id="salesChart" width="800" height="400"></canvas>
+<script>
+const ctx = document.getElementById('salesChart').getContext('2d');
+const salesChart = new Chart(ctx, {
+	type: 'bar',
+	data: {
+		labels: {{ json .Labels }},
+		datasets: [{
+			label: 'Продажи за месяц',
+			data: {{ json .Data }},
+			backgroundColor: 'rgba(75, 192, 192, 0.6)',
+			borderColor: 'rgba(75, 192, 192, 1)',
+			borderWidth: 1
+		}]
+	},
+	options: {
+		scales: {
+			y: { beginAtZero: true }
+		}
+	}
+});
+</script>
+<br/>
+<a href="/index">На главную</a>
+</body>
+</html>
+{{end}}
