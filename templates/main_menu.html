@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Главное меню</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+<style>
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  header {
+    background-color: #2c3e50;
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: #34495e;
+  }
+  nav a {
+    display: block;
+    padding: 14px 20px;
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+  }
+  nav a:hover {
+    background-color: #2980b9;
+    color: #fff;
+  }
+  main {
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .button {
+    display: inline-block;
+    padding: 15px 25px;
+    margin: 15px 0;
+    background-color: #2980b9;
+    color: #fff;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  .button:hover {
+    background-color: #3498db;
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #555;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Мониторинг и аналитика продаж</h1>
+</header>
+
+<nav>
+  <a href="/index">Главная</a>
+  <a href="/dashboard">Продажи</a>
+  <a href="/add_sale">Добавить продажу</a>
+  <a href="/analytics">Аналитика</a>
+  <a href="/logout">Выход</a>
+</nav>
+
+<main>
+  <h2>Добро пожаловать!</h2>
+  <p>Выберите нужный раздел, чтобы управлять продажами и просматривать аналитику.</p>
+
+  <!-- Можно добавить кнопки или дополнительные разделы -->
+  <a href="/add_sale" class="button">Добавить продажу</a>
+  <a href="/dashboard" class="button">Посмотреть продажи</a>
+  <a href="/analytics" class="button">Просмотр аналитики</a>
+</main>
+
+</body>
+</html>
