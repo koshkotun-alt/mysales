@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><title>Регистрация</title></head>
+<body>
+<h2>Регистрация</h2>
+{{if .}}<p style="color:red">{{.}}</p>{{end}}
+<form method="post" action="/register">
+  <input name="username" placeholder="Логин">
+  <input name="password" type="password" placeholder="Пароль">
+  <button>Зарегистрироваться</button>
+</form>
+<a href="/login">Авторизация</a>
+</body>
+</html>
